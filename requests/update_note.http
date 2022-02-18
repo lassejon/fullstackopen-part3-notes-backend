@@ -2,7 +2,7 @@ PUT http://localhost:3002/api/notes/620f77936c72ce878eb04cee
 Content-Type: application/json
 
 {
-  "content": "Webstorm rest tasddasdasdsadsadsaestasdasd",
+  "content": "we ",
   "important": true
 }
 
