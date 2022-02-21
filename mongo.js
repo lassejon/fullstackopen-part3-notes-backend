@@ -1,10 +1,13 @@
 const mongoose = require('mongoose')
 
+// eslint-disable-next-line no-undef
 if (process.argv.length<3) {
   console.log('give password as argument')
+  // eslint-disable-next-line no-undef
   process.exit(1)
 }
 
+// eslint-disable-next-line no-undef
 const password = process.argv[2]
 
 const url =
@@ -19,20 +22,6 @@ const noteSchema = new mongoose.Schema({
 })
 
 const Note = mongoose.model('Note', noteSchema)
-
-const note = new Note({
-  content: 'CSS is hard',
-  date: new Date(),
-  important: false,
-})
-
-if ( false ) {
-  note.save().then(result => {
-    console.log('note saved!')
-    mongoose.connection.close()
-  })
-}
-
 
 Note.find({}).then(result => {
   result.forEach(note => {
